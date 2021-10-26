@@ -9,7 +9,7 @@ function App() {
 
 	return (
 	<div className="App">
-		<h1>Holberton Merkaplace</h1>
+		<h1>Holberton Talent Marketplace</h1>
 		{
 			isAuthenticated ? <LogoutButton/> : <LoginButton/>
 		}
