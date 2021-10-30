@@ -54,7 +54,7 @@ const ListHolbies = () => {
                     <div class="flex-row-reverse border-bottom border-top">
                         <div class="">
                             <div class="about-text go-to">
-                                <img src={require("../profile_pitures/" + holbie.id + ".png").default } class="img-thumbnail rounded float-end" width="200" height="200" />
+                                <img src={require("../profile_pitures/" + holbie.id + ".png").default } class="img-thumbnail rounded float-end" width="200" height="200" onError={(e)=>{e.target.onerror = null; e.target.src=require("../profile_pitures/02B8s9VcZQ.png").default}} /> 
                                 <h3 class="dark-color mt-4">{holbie.name}</h3>
                                 <p>{holbie.about_me.substring(0, 200) + "..."}</p>
                             </div>
