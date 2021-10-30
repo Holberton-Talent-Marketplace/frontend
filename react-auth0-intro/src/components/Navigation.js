@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+
 export default class Navigation extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img src={require("/home/lili/holberton/Talent-Marketplace_techstars/frontend/react-auth0-intro/src/logos/Logo peque gris.PNG").default} width="50" height="30" alt=""/>
+                        <img src={require("../logos/Logo peque gris.PNG").default} width="50" height="30" alt=""/>
                         Holberton Talent Marketplace
                     </Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
