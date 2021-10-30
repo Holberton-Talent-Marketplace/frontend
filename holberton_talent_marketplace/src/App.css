@@ -1,0 +1,20 @@
+:root {
+    border-width: 1px;
+    border-style: solid;
+    font-size-adjust: 12px;
+    font-variant-position: 500;
+    resize: 20px;
+	border-color: #8c959f
+}
+body {
+    font-family:"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    line-height: 1.5;
+    color: #24292f;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+	box-sizing: border-box;
+}
