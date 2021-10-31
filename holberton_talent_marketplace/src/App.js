@@ -34,27 +34,27 @@ function App() {
 						<img src={require("./logos/Logo peque gris.PNG").default} width="50" height="30" alt="" />
 						Holberton Talent Marketplace
 					</Link>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
+					<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav ms-auto">
-							<li class="nav-item active">
+					<div className="collapse navbar-collapse" id="navbarNav">
+						<ul className="navbar-nav ms-auto">
+							<li className="nav-item active">
 								<Link className="nav-link" to="/">Home</Link>
 							</li>
-							<li class="nav-item">
+							<li className="nav-item">
 								<Link className="nav-link" to="/listholbies">Holbies</Link>
 							</li>
-							<li class="nav-item">
+							<li className="nav-item">
 								<Link className="nav-link" to="/listcompanies">Companies</Link>
 							</li>
-							<li class="nav-item">
+							<li className="nav-item">
 								<Link className="nav-link" to="/createholbie">Create Holbie</Link>
 							</li>
-							<li class="nav-item">
+							<li className="nav-item">
 								<Link className="nav-link" to="/createcompany">Create company</Link>
 							</li>
-							<li class="nav-item">
+							<li className="nav-item">
 								{
 									isAuthenticated ? <LogoutButton /> : <LoginButton />
 								}
@@ -66,7 +66,7 @@ function App() {
 			<Route exact path="/" component={Home} />
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
-			<Route path="/profileholbie/:id" component={HolbieProfile} />
+			<Route path="/holbie_profile/:id" component={HolbieProfile} />
 			<Route path="/createholbie" component={CreateHolbie} />
 			<Route path="/createcompany" component={CreateCompany} />
 			<Route path="/profilecompany/:id" component={CompanyProfile} />

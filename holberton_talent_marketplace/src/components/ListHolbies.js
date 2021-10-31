@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 
 const ListHolbies = () => {
@@ -53,29 +54,31 @@ const ListHolbies = () => {
             <section class="section about-section gray-bg" id="about">
                 <div class="container border">
                     {search(holbies).map(holbie => (
-                        <div class="flex-row-reverse border-bottom border-top">
-                            <div class="">
-                                <div class="about-text go-to">
-                                    <img src={require("../profile_pitures/" + holbie.id + ".png").default} class="img-thumbnail rounded float-end" width="200" height="200" onError={(e) => {
-                                        e.target.src = '../profile_pictures/default_avatar.jpg' // some replacement image
-                                    }} />
-                                    <h3 class="dark-color mt-4">{holbie.name}</h3>
-                                    <p>{holbie.about_me.substring(0, 200) + "..."}</p>
-                                </div>
-                                <div class="about-text go-to">
-                                    <h4 class="dark-color">Technologies</h4>
-                                    <p>{holbie.technologies}</p>
-                                </div>
-                                <div class="about-text go-to">
-                                    <h4 class="dark-color">The most amazing thing</h4>
-                                    <p>{holbie.most_amazing_thing}</p>
-                                </div>
-                                <div class="about-text go-to">
-                                    <h4 class="dark-color">Gender</h4>
-                                    <p>{holbie.gender}</p>
+                        <Link to={`/holbie_profile/${holbie.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                            <div class="flex-row-reverse border-bottom border-top">
+                                <div class="">
+                                    <div class="about-text go-to">
+                                        <img src={require("../profile_pitures/" + holbie.id + ".png").default} class="img-thumbnail rounded float-end" width="200" height="200" onError={(e) => {
+                                            e.target.src = '../profile_pictures/default_avatar.jpg' // some replacement image
+                                        }} />
+                                        <h3 class="dark-color mt-4">{holbie.name}</h3>
+                                        <p>{holbie.about_me.substring(0, 200) + "..."}</p>
+                                    </div>
+                                    <div class="about-text go-to">
+                                        <h4 class="dark-color">Technologies</h4>
+                                        <p>{holbie.technologies}</p>
+                                    </div>
+                                    <div class="about-text go-to">
+                                        <h4 class="dark-color">The most amazing thing</h4>
+                                        <p>{holbie.most_amazing_thing}</p>
+                                    </div>
+                                    <div class="about-text go-to">
+                                        <h4 class="dark-color">Gender</h4>
+                                        <p>{holbie.gender}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>
