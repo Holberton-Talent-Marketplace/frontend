@@ -57,7 +57,7 @@ const ListHolbies = () => {
                             <div class="flex-row-reverse border-bottom border-top">
                                 <div class="">
                                     <div class="about-text go-to">
-                                        <img src={require("../profile_pitures/" + holbie.id + ".png").default} class="img-thumbnail rounded float-end" width="200" height="200" onError={(e) => {
+                                        <img src={require("../profile_pitures/" + holbie.id + ".png").default} class="profilePicture img-thumbnail rounded float-end" width="200" height="200" onError={(e) => {
                                             e.target.src = '../profile_pictures/default_avatar.jpg' // some replacement image
                                         }} />
                                         <h3 class="dark-color mt-4">{holbie.name}</h3>
