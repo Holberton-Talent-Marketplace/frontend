@@ -6,6 +6,7 @@ import './App.css';
 
 
 //components loging
+import PrivateRoute from './components/PrivateRoute';
 import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile"
@@ -52,7 +53,7 @@ function App() {
 								<Link className="nav-link" to="/createholbie">Create Holbie</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/createcompany">Create company</Link>
+								<Link className="nav-link" to="/createcompany">Create Company</Link>
 							</li>
 							<li className="nav-item">
 								{
@@ -66,9 +67,9 @@ function App() {
 			<Route exact path="/" component={Home} />
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
-			<Route path="/holbie_profile/:id" component={HolbieProfile} />
-			<Route path="/createholbie" component={CreateHolbie} />
-			<Route path="/createcompany" component={CreateCompany} />
+			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
+			<PrivateRoute path="/createholbie" component={CreateHolbie} />
+			<PrivateRoute path="/createcompany" component={CreateCompany} />
 			<Route path="/profilecompany/:id" component={CompanyProfile} />
 
 

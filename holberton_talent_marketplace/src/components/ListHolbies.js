@@ -44,7 +44,6 @@ const ListHolbies = () => {
         }
     }
     const columns = holbies[0] && Object.keys(holbies[0]);
-    console.log(columns)
     return <Fragment>
         <div class="container">
             <h1 className="text-center mt-5">Find A Holbie</h1>
