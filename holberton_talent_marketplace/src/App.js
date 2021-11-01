@@ -19,6 +19,7 @@ import CreateHolbie from './components/CreateHolbie'
 import CreateCompany from './components/CreateCompany'
 import CompanyProfile from './components/CompanyProfile'
 import Home from './components/Home'
+
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
 					</div>
 				</div>
 			</nav>
+			
 			<Route exact path="/" component={Home} />
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
