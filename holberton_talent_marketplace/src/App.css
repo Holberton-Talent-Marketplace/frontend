@@ -18,3 +18,62 @@ body {
     margin: 0;
 	box-sizing: border-box;
 }
+
+ul {
+    list-style: none;
+}
+
+.spinner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.buttonNoStyle {
+    padding-top: 8px;
+	background: none;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    color:#8c959f;
+}
+
+.avatar-user {
+    border-radius: 50% !important;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: var(--color-avatar-bg);
+    border-radius: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1px var(--color-avatar-border);
+    border-style: none;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.smallLogo {
+    margin-right: 7px;
+}
+
+.profilePicture {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.holbiePicture {
+    object-fit: cover;
+}
