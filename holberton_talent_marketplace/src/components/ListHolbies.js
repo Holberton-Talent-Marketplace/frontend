@@ -45,7 +45,7 @@ const ListHolbies = () => {
     }
     const columns = holbies[0] && Object.keys(holbies[0]);
     return <Fragment>
-        <div class="container">
+        <div class="container myContainer">
             <h1 className="text-center mt-5">Find A Holbie</h1>
             <form>
                 <input type="text" className="form-control form-control-sm mt-5" placeholder="Name, technologies, gender" value={q} onChange={(e) => setQ(e.target.value)}></input>

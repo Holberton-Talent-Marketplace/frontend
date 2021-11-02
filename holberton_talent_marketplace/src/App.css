@@ -69,11 +69,9 @@ ul {
 }
 
 .profilePicture {
-    height: 300px;
-    width: 300px;
+    height: 270px;
+    width: 270px;
     object-fit: cover;
+
 }
 
-.holbiePicture {
-    object-fit: cover;
-}
