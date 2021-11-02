@@ -69,8 +69,8 @@ ul {
 }
 
 .profilePicture {
-    height: 270px;
-    width: 270px;
+    height: 230px;
+    width: 230px;
     object-fit: cover;
 
 }
@@ -81,3 +81,6 @@ ul {
     object-fit: cover;
 }
 
+.colw {
+	width: 800px;
+}

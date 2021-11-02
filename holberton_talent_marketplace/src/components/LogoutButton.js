@@ -7,8 +7,9 @@ const LogoutButton = () => {
     return (
        <button className="buttonNoStyle nav-item mr-3" onClick={() => logout()}>
 	    Log Out
-        <img src={user.picture} alt={user.name} size="20" height="20" width="20" class="avatar-user avatar avatar-small ml-3"/>
+        <img src={user.picture} alt={user.name} size="25" height="25" width="25" class="avatar-user avatar avatar-small ml-3"/>
        </button>
+
 
     )
 }
