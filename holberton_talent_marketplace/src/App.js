@@ -1,6 +1,8 @@
 import React, { component } from 'react';
 import { BrowserRouter as Router, Route, link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
+import FormHolbie from './components/FormHolbie';
+import FormCompany from './components/FormCompany';
 
 import './App.css';
 
@@ -70,8 +72,8 @@ function App() {
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
 			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
-			<PrivateRoute path="/createholbie" component={CreateHolbie} />
-			<PrivateRoute path="/createcompany" component={CreateCompany} />
+			<PrivateRoute path="/createholbie" component={FormHolbie} />
+			<PrivateRoute path="/createcompany" component={FormCompany} />
 			<Route path="/profilecompany/:id" component={CompanyProfile} />
 
 
