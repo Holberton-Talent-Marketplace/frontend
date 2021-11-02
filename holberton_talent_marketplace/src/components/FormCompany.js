@@ -4,7 +4,6 @@ import Axios from 'axios';
 
 const FormCompany = () => {
 	const [image, setImage] = useState([])
-	const [companyId, setId] = useState([])
 	function formifyAndSend(data) {
 		const formData = new FormData()
 		for (const [key, value] of Object.entries(data)) {
@@ -12,8 +11,7 @@ const FormCompany = () => {
 		}
 		formData.append('files', image)
 		Axios.post("http://localhost:5000/companies", formData).then((response) => {
-			setId(response.data.id)
-			console.log(response.data.id)
+			console.log(response)
 		})
 	}
 
@@ -68,7 +66,7 @@ const FormCompany = () => {
 					{({ errors }) => (
 						<Form className="formulario">
 							<div>
-								<label htmlFor="name">Company name</label>
+								<label htmlFor="name">Company Name</label>
 								<Field
 									type="text"
 									id="name"
@@ -91,7 +89,7 @@ const FormCompany = () => {
 									id="about_us"
 									name="about_us"
 									as="textarea"
-									placeholder="Our goal is to..."
+									placeholder="About us"
 								/>
 							</div>
 
@@ -112,7 +110,7 @@ const FormCompany = () => {
 									type="location"
 									id="location"
 									name="location"
-									placeholder="City, Country"
+									placeholder="Medellín, Colombia"
 								/>
 							</div>
 
