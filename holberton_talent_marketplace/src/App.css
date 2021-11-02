@@ -69,11 +69,15 @@ ul {
 }
 
 .profilePicture {
-    height: 300px;
-    width: 300px;
+    height: 230px;
+    width: 230px;
     object-fit: cover;
 }
 
 .holbiePicture {
     object-fit: cover;
+}
+
+.colw {
+	width: 800px;
 }

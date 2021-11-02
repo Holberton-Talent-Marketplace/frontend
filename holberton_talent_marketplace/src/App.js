@@ -16,8 +16,8 @@ import Navigation from "./components/Navigation"
 import ListHolbies from './components/ListHolbies'
 import ListCompanies from './components/ListCompanies'
 import HolbieProfile from './components/HolbieProfile'
-import CreateHolbie from './components/CreateHolbie'
-import CreateCompany from './components/CreateCompany'
+import NewHolbie from './components/NewHolbie'
+import NewCompany from './components/NewCompany'
 import CompanyProfile from './components/CompanyProfile'
 import Home from './components/Home'
 
@@ -51,10 +51,10 @@ function App() {
 								<Link className="nav-link" to="/listcompanies">Companies</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/createholbie">Create Holbie</Link>
+								<Link className="nav-link" to="/newholbie">New Holbie</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/createcompany">Create Company</Link>
+								<Link className="nav-link" to="/newcompany">New Company</Link>
 							</li>
 							<li className="nav-item">
 								{
@@ -70,8 +70,8 @@ function App() {
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
 			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
-			<PrivateRoute path="/createholbie" component={CreateHolbie} />
-			<PrivateRoute path="/createcompany" component={CreateCompany} />
+			<PrivateRoute path="/newholbie" component={NewHolbie} />
+			<PrivateRoute path="/newcompany" component={NewCompany} />
 			<Route path="/profilecompany/:id" component={CompanyProfile} />
 
 

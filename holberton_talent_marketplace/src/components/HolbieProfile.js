@@ -26,7 +26,7 @@ const HolbieProfile = () => {
 	}, [])
 	console.log(holbie)
 	return (
-		<div class="container">
+		<div class="container p-5">
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-4 mb-5 mb-lg-0 wow fadeIn">
 					<div class="card border-0 shadow">
@@ -47,11 +47,12 @@ const HolbieProfile = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8 border">
+				<div class="col-lg-7 border">
 					<div class="ps-lg-1-6 ps-xl-5">
 						<div class="mb-3 wow fadeIn">
 							<div class="text-start mb-1-6 wow fadeIn">
 								<h2 class="h1 mb-3 text-primary mt-3">About Me</h2>
+
 							</div>
 							<p>{holbie.about_me}</p>
 						</div>
@@ -98,6 +99,9 @@ const HolbieProfile = () => {
 											<p class="mb-0">{holbie.skills}</p>
 										</div>
 									</div>
+								</div>
+								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+									<button type="button" class="btn btn-primary btn-lg">Add to favorites</button>
 								</div>
 							</div>
 						</div>

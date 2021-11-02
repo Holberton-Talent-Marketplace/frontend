@@ -26,10 +26,10 @@ export default class Navigation extends Component {
                                 <Link className="nav-link" to="/listcompanies">Companies</Link>
                             </li>
                             <li class="nav-item">
-                                <Link className="nav-link" to="/createholbie">Create Holbie</Link>
+                                <Link className="nav-link" to="/Newholbie">New Holbie</Link>
                             </li>
                             <li class="nav-item">
-                                <Link className="nav-link" to="/createcompany">Create company</Link>
+                                <Link className="nav-link" to="/newcompany">New company</Link>
                             </li>
                         </ul>
                     </div>
