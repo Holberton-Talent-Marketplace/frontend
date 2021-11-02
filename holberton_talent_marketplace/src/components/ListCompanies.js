@@ -45,7 +45,7 @@ const ListCompanies = () => {
             <section class="section about-section gray-bg" id="about">
                 <div class="container border">
                     {search(companies).map(company => (
-                        <Link to={`/holbie_profile/${company.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                        <Link to={`/company_profile/${company.id}`} style={{ textDecoration: 'none', color: 'black' }}>
                             <div class="flex-row-reverse border-bottom border-top">
                                 <div class="">
                                     <div class="about-text go-to">

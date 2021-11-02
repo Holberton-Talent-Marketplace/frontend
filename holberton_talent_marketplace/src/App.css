@@ -23,6 +23,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .spinner {
     position: absolute;
     display: flex;
