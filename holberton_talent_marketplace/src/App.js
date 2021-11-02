@@ -72,8 +72,8 @@ function App() {
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
 			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
-			<PrivateRoute path="/createholbie" component={FormHolbie} />
-			<PrivateRoute path="/createcompany" component={FormCompany} />
+			<PrivateRoute path="/newholbie" component={FormHolbie} />
+			<PrivateRoute path="/newcompany" component={FormCompany} />
 			<Route path="/profilecompany/:id" component={CompanyProfile} />
 
 
