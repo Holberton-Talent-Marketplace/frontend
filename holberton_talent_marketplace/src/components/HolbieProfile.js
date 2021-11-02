@@ -24,7 +24,6 @@ const HolbieProfile = () => {
 	useEffect(() => {
 		getHolbie();
 	}, [])
-	console.log(holbie)
 	return (
 		<div class="container p-5">
 			<div class="row justify-content-center">
@@ -56,14 +55,14 @@ const HolbieProfile = () => {
 							</div>
 							<p>{holbie.about_me}</p>
 						</div>
-						<div class="mb-5 wow fadeIn">
-							<div class="wow fadeIn">
+						<div class="mb-5 wow fadeIn border-bottom">
+							<div class="wow fadeIn border-bottom">
 								<div class="text-start mb-1-6 wow fadeIn">
 									<h2 class="mb-3 mt-0 text-primary">Strengths</h2>
 								</div>
 								<p class="mb-4">{holbie.strengths}</p>
 							</div>
-							<div class="row mt-n4">
+							<div class="row mt-n4 align-items-center">
 								<div class="col-sm-6 col-xl-4 mt-4">
 									<div class="card text-center border-0 rounded-3">
 										<div class="card-body">
@@ -94,6 +93,15 @@ const HolbieProfile = () => {
 								<div class="col-sm-6 col-xl-4 mt-4">
 									<div class="card text-center border-0 rounded-3">
 										<div class="card-body">
+											<i class="icon-box large rounded-3 mb-4"></i>
+											<h3 class="h5 mb-3"></h3>
+											<p class="mb-0"></p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-xl-4 mt-4 align-items-center">
+									<div class="card text-center border-0 rounded-3">
+										<div class="card-body">
 											<i class="ti-stats-up icon-box medium rounded-3 mb-4"></i>
 											<h3 class="h5 mb-3">Skills</h3>
 											<p class="mb-0">{holbie.skills}</p>
@@ -113,13 +121,49 @@ const HolbieProfile = () => {
 								<div class="row mt-n4">
 									<div class="col-sm-6 col-xl-4 mt-4">
 										<div class="card text-center border-0 rounded-3">
-											<div class="card-body">
-												<i class="ti-briefcase icon-box large rounded-3 mb-4"></i>
-												<h3 class="h5 mb-3">The Shell</h3>
-												<p class="mb-0">For Holberton's first trimester final project I built a command interpreter in C, this command interpreter functions just like the built-in shell that every Unix-like operating system has.(THIS IS STATIC)</p>
-												<p class="mb-0">C</p>
-												<a href="#" class="rounded-3"><i class="fab ti-eye"></i> Project Link</a>
-											</div>
+											{
+												holbie.projects &&
+													typeof holbie.projects === "object" &&
+													holbie.projects.length ?
+													holbie.projects.map((project) =>
+														<div class="card-body">
+															<i class="ti-briefcase icon-box large rounded-3 mb-4"></i>
+															<h3 class="h5 mb-3">{project.name}</h3>
+															<p class="mb-0">{project.description}</p>
+															<b><p class="mb-0">{project.technologiesUsed}</p></b>
+															<a href={project.linkToProject} target="_blank" rel="noopener noreferrer" class="rounded-3"><i class="fab ti-eye"></i> Project Link</a>
+														</div>
+													)
+													:
+													<p>No projects listed for this entry.</p>
+											}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="wow fadeIn">
+							<div class="text-start mb-1-6 wow fadeIn">
+								<h2 class="mb-0 text-primary">Experiences</h2>
+							</div>
+							<div class="mb-5 wow fadeIn">
+								<div class="row mt-n4">
+									<div class="col-sm-6 col-xl-4 mt-4">
+										<div class="card text-center border-0 rounded-3">
+											{
+												holbie.experiences &&
+													typeof holbie.experiences === "object" &&
+													holbie.experiences.length ?
+													holbie.experiences.map((experience) =>
+														<div class="card-body">
+															<i class="ti-check-box icon-box large rounded-3 mb-4"></i>
+															<h3 class="h5 mb-3">{experience.name} at {experience.companyName}</h3>
+															<p class="mb-0">{experience.description}</p>
+														</div>
+													)
+													:
+													<p>No experiences listed for this entry.</p>
+											}
 										</div>
 									</div>
 								</div>
