@@ -96,7 +96,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="gender">Gender</label>
 								<Field
-									type="gender"
+									type="text"
 									id="gender"
 									name="gender"
 									as="textarea"
@@ -107,7 +107,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="about_me">About me</label>
 								<Field
-									type="about_me"
+									type="text"
 									id="about_me"
 									name="about_me"
 									as="textarea"
@@ -118,7 +118,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="location">Location</label>
 								<Field
-									type="location"
+									type="text"
 									id="location"
 									name="location"
 									placeholder="Medellín, Colombia"
@@ -128,7 +128,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="strengths">Strengths</label>
 								<Field
-									type="strengths"
+									type="text"
 									id="strengths"
 									name="strengths"
 									as="textarea"
@@ -139,7 +139,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="most_amazing">The most amazing thing</label>
 								<Field
-									type="most_amazing"
+									type="text"
 									id="most_amazing"
 									name="most_amazing"
 									as="textarea"
@@ -150,7 +150,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="skills">Skills</label>
 								<Field
-									type="skills"
+									type="text"
 									id="skills"
 									name="skills"
 									as="textarea"
@@ -161,7 +161,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="technologies">Technologies</label>
 								<Field
-									type="technologies"
+									type="text"
 									id="technologies"
 									name="technologies"
 									as="textarea"
@@ -172,7 +172,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="industries">Industries</label>
 								<Field
-									type="industries"
+									type="text"
 									id="industries"
 									name="industries"
 									as="textarea"
@@ -183,7 +183,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="previous_studies">Previous studies</label>
 								<Field
-									type="previous_studies"
+									type="text"
 									id="previous_studies"
 									name="previous_studies"
 									as="textarea"
@@ -195,7 +195,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="linkedin">LinkedIn</label>
 								<Field
-									type="linkedin"
+									type="text"
 									id="linkedin"
 									name="linkedin"
 									placeholder="https://www.linkedin.com/in/john-doe"
@@ -205,7 +205,7 @@ const FormHolbie = () => {
 							<div>
 								<label htmlFor="github">GitHub</label>
 								<Field
-									type="github"
+									type="text"
 									id="github"
 									name="github"
 									placeholder="https://github.com/JohnDoe"
