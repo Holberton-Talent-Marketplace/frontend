@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormHolbie from './components/FormHolbie';
 import FormCompany from './components/FormCompany';
+import FormExperience from './components/FormExperience';
+import FormProjects from './components/FormProjects';
 
 import './App.css';
 

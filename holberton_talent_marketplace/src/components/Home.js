@@ -43,7 +43,6 @@ const Home = () => {
 					</div>
 				</div>
 				<div class="col">
-
 					<div class="row row-cols-1 row-cols-md-3 g-4">
 						{holbies.slice(0, 3).map(holbie => (
 							<div class="col">
@@ -51,10 +50,10 @@ const Home = () => {
 									<img src={require("../profile_pitures/" + holbie.id + ".png").default} class="card-img-top" alt="..." width="80" height="210" />
 									<div class="card-body">
 										<h5 class="card-title">{holbie.name}</h5>
-										<p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p>
+										<p class="card-text">{holbie.about_me.substring(0, 500) + "..."}</p>
 									</div>
 									<div class="card-footer">
-										<small class="text-muted">{holbie.technologies.substring(0, 27) + "..."}</small>
+										<small class="text-muted">{holbie.technologies.substring(0, 500) + "..."}</small>
 									</div>
 								</div>
 							</div>
