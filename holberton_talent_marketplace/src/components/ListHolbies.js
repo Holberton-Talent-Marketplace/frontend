@@ -28,23 +28,25 @@ const ListHolbies = () => {
 
 										<img src={require("../profile_pitures/" + holbie.id + ".png").default} class="card-img-top" alt="..." />
 										<div class="card-body">
-											<h5 class="card-title">{holbie.name}</h5>
-											<h6 class="card-title">Gender</h6>
-											<p class="card-text">{holbie.gender}</p>
-											<h6 class="card-title">About me</h6>
-											<p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p>
-											<h6 class="card-title">Location</h6>
-											<p class="card-text">{holbie.location}</p>
-											<h6 class="card-title">strengths</h6>
-											<p class="card-text">{holbie.strengths}</p>
-											<h6 class="card-title">Skills</h6>
-											{/* <p class="card-text">{holbie.skills}</p> */}
-											<h6 class="card-title">Most amazing thing</h6>
-											{/* <p class="card-text">{holbie.most_amazing_thing.substring(0, 89) + "..."}</p> */}
-											<h6 class="card-title">Technologies</h6>
-											<p class="card-text">{holbie.technologies.substring(0, 27) + "..."}</p>
-											<h6 class="card-title">Previous education</h6>
-											{/* <p class="card-text">{holbie.previous_education}</p> */}
+											<ul class="list-group list-group-alaing">
+												<h5 class="card-title">{holbie.name}</h5><br/>
+												<h6 class="card-subtitle mb-2 text-muted">Gender</h6>
+												<p class="card-text">{holbie.gender}</p><br/>
+												<h6 class="card-subtitle mb-2 text-muted">About me</h6>
+												<p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p><br/>
+												<h6 class="card-subtitle mb-2 text-muted">Location</h6>
+												<p class="card-text">{holbie.location}</p><br/>
+												<h6 class="card-subtitle mb-2 text-muted">strengths</h6>
+												<p class="card-text">{holbie.strengths}</p><br/>
+												<h6 class="card-subtitle mb-2 text-muted">Skills</h6>
+												{/* <p class="card-text">{holbie.skills}</p> */}<br/>
+												<h6 class="card-subtitle mb-2 text-muted">Most amazing thing</h6>
+												{/* <p class="card-text">{holbie.most_amazing_thing.substring(0, 89) + "..."}</p> */}<br/>
+												<h6 class="card-subtitle mb-2 text-muted">Technologies</h6>
+												<p class="card-text">{holbie.technologies.substring(0, 27) + "..."}</p><br/>
+												<h6 class="card-subtitle mb-2 text-muted">Previous education</h6>
+												{/* <p class="card-text">{holbie.previous_education}</p> */}<br/>
+											</ul>
 										</div>
 
 										<div class="card-footer">
