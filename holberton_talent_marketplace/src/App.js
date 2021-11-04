@@ -5,6 +5,7 @@ import FormHolbie from './components/FormHolbie';
 import FormCompany from './components/FormCompany';
 import FormExperience from './components/FormExperience';
 import FormProjects from './components/FormProjects';
+import HolbiesByTech from './components/HolbiesByTech';
 
 import './App.css';
 
@@ -73,6 +74,7 @@ function App() {
 			<Route exact path="/" component={Home} />
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
+			<PrivateRoute path="/holbie_knows/:tech" component={HolbiesByTech} />
 			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
 			<PrivateRoute path="/newholbie" component={FormHolbie} />
 			<PrivateRoute path="/newcompany" component={FormCompany} />

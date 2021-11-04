@@ -2,6 +2,11 @@ import React, { Component, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const ListHolbies = () => {
+	function toTags(string) {
+		let noDots = string.split('.').join("");
+		let tags = noDots.split(', ')
+		return tags
+	}
 	const [holbies, setHolbies] = useState([])
 	const getHolbies = async () => {
 		try {
@@ -29,23 +34,27 @@ const ListHolbies = () => {
 										<img src={require("../profile_pitures/" + holbie.id + ".png").default} class="card-img-top" alt="..." />
 										<div class="card-body">
 											<ul class="list-group list-group-alaing">
-												<h5 class="card-title">{holbie.name}</h5><br/>
+												<h5 class="card-title">{holbie.name}</h5><br />
 												<h6 class="card-subtitle mb-2 text-muted">Gender</h6>
-												<p class="card-text">{holbie.gender}</p><br/>
+												<p class="card-text">{holbie.gender}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">About me</h6>
-												<p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p><br/>
+												<p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">Location</h6>
-												<p class="card-text">{holbie.location}</p><br/>
+												<p class="card-text">{holbie.location}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">strengths</h6>
-												<p class="card-text">{holbie.strengths}</p><br/>
+												<p class="card-text">{holbie.strengths}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">Skills</h6>
-												{/* <p class="card-text">{holbie.skills}</p> */}<br/>
+												<p class="card-text">{holbie.skills}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">Most amazing thing</h6>
-												{/* <p class="card-text">{holbie.most_amazing_thing.substring(0, 89) + "..."}</p> */}<br/>
+												<p class="card-text">{holbie.most_amazing_thing.substring(0, 89) + "..."}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">Technologies</h6>
-												<p class="card-text">{holbie.technologies.substring(0, 27) + "..."}</p><br/>
+												<p class="card-text">{toTags(holbie.technologies).map(tag => (
+													<Link to={`/holbie_knows/${tag}`} style={{ textDecoration: 'none', color: 'black' }}>
+														<span className="tag">{tag}</span>
+													</Link>
+												))}</p><br />
 												<h6 class="card-subtitle mb-2 text-muted">Previous education</h6>
-												{/* <p class="card-text">{holbie.previous_education}</p> */}<br/>
+												<p class="card-text">{holbie.previous_education}</p><br />
 											</ul>
 										</div>
 

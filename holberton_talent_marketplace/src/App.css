@@ -104,12 +104,15 @@ a {
 
 }
 
+.tag:hover {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
 .section {
     display: flex;
 	flex-direction: row;
 	flex-direction: column;
 	flex-wrap: wrap;
-	
 }
 .card-img-top {
     width: 100%;

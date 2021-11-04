@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Axios from 'axios';
 
-const FormExperience = () => {
+const FormProjects = () => {
 	const [image, setImage] = useState([])
 	function formifyAndSend(data) {
 		const formData = new FormData()
