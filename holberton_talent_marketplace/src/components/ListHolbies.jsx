@@ -53,7 +53,7 @@ const ListHolbies = () => {
                         <div class="">
                             <div class="about-text go-to">
                                 <img src={require("../../../../backend/profile_pictures/" + holbie.id + ".png").default} class=" img-thumbnail rounded float-right" width="200" height="200" />
-                                <h3 class="dark-color mt-4">{holbie.name}</h3>
+                                <h3 class="dark-color mt-4">{holbie.name} AAAAAA</h3>
                                 <p>{holbie.about_me.substring(0, 200) + "..."}</p>
                             </div>
                             <div class="about-text go-to">

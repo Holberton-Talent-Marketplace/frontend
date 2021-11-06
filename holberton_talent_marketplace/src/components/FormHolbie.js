@@ -28,12 +28,12 @@ const FormHolbie = () => {
 						about_me: '',
 						location: '',
 						strengths: '',
-						most_amazing: '',
+						most_amazing_thing: '',
 						skills: '',
 						technologies: '',
 						industries: '',
 						experience: '',
-						previous_studies: '',
+						previous_education: '',
 						projects: '',
 						capstone_project: '',
 						linkedin: '',
@@ -137,11 +137,11 @@ const FormHolbie = () => {
 							</div>
 
 							<div>
-								<label htmlFor="most_amazing">The most amazing thing</label>
+								<label htmlFor="most_amazing_thing">The most amazing thing</label>
 								<Field
 									type="text"
-									id="most_amazing"
-									name="most_amazing"
+									id="most_amazing_thing"
+									name="most_amazing_thing"
 									as="textarea"
 									placeholder="The most amazing thing I did was..."
 								/>
@@ -181,11 +181,11 @@ const FormHolbie = () => {
 							</div>
 
 							<div>
-								<label htmlFor="previous_studies">Previous studies</label>
+								<label htmlFor="previous_education">Previous studies</label>
 								<Field
 									type="text"
-									id="previous_studies"
-									name="previous_studies"
+									id="previous_education"
+									name="previous_education"
 									as="textarea"
 									placeholder="Mechatronic Engineering, Golang..."
 								/>

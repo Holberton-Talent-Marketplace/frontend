@@ -52,15 +52,15 @@ const HolbiesByTech = () => {
                                                 <h6 class="card-subtitle mb-2 text-muted">Gender</h6>
                                                 <p class="card-text">{holbie.gender}</p><br />
                                                 <h6 class="card-subtitle mb-2 text-muted">About me</h6>
-                                                <p class="card-text">{holbie.about_me.substring(0, 89) + "..."}</p><br />
+                                                <p class="card-text">{holbie.about_me}</p><br />
                                                 <h6 class="card-subtitle mb-2 text-muted">Location</h6>
                                                 <p class="card-text">{holbie.location}</p><br />
-                                                <h6 class="card-subtitle mb-2 text-muted">strengths</h6>
+                                                <h6 class="card-subtitle mb-2 text-muted">Strengths</h6>
                                                 <p class="card-text">{holbie.strengths}</p><br />
                                                 <h6 class="card-subtitle mb-2 text-muted">Skills</h6>
                                                 <p class="card-text">{holbie.skills}</p><br />
                                                 <h6 class="card-subtitle mb-2 text-muted">Most amazing thing</h6>
-                                                <p class="card-text">{holbie.most_amazing_thing.substring(0, 89) + "..."}</p><br />
+                                                <p class="card-text">{holbie.most_amazing_thing}</p><br />
                                                 <h6 class="card-subtitle mb-2 text-muted">Technologies</h6>
                                                 <p class="card-text">{toTags(holbie.technologies).map(tag => (
                                                     <Link to={`/holbie_knows/${tag}`} style={{ textDecoration: 'none', color: 'black' }}>
