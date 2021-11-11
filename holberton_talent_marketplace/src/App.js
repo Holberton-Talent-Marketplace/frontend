@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormHolbie from './components/FormHolbie';
 import FormCompany from './components/FormCompany';
+import FormExperience from './components/FormExperience';
+import FormProjects from './components/FormProjects';
+import HolbiesByTech from './components/HolbiesByTech';
 
 import './App.css';
 
@@ -18,8 +21,8 @@ import Navigation from "./components/Navigation"
 import ListHolbies from './components/ListHolbies'
 import ListCompanies from './components/ListCompanies'
 import HolbieProfile from './components/HolbieProfile'
-import CreateHolbie from './components/CreateHolbie'
-import CreateCompany from './components/CreateCompany'
+import NewHolbie from './components/NewHolbie'
+import NewCompany from './components/NewCompany'
 import CompanyProfile from './components/CompanyProfile'
 import Home from './components/Home'
 
@@ -53,10 +56,10 @@ function App() {
 								<Link className="nav-link" to="/listcompanies">Companies</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/createholbie">Create Holbie</Link>
+								<Link className="nav-link" to="/newholbie">New Holbie</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/createcompany">Create Company</Link>
+								<Link className="nav-link" to="/newcompany">New Company</Link>
 							</li>
 							<li className="nav-item">
 								{
@@ -71,10 +74,11 @@ function App() {
 			<Route exact path="/" component={Home} />
 			<Route path="/listholbies" component={ListHolbies} />
 			<Route path="/listcompanies" component={ListCompanies} />
+			<PrivateRoute path="/holbie_knows/:tech" component={HolbiesByTech} />
 			<PrivateRoute path="/holbie_profile/:id" component={HolbieProfile} />
-			<PrivateRoute path="/createholbie" component={FormHolbie} />
-			<PrivateRoute path="/createcompany" component={FormCompany} />
-			<Route path="/profilecompany/:id" component={CompanyProfile} />
+			<PrivateRoute path="/newholbie" component={FormHolbie} />
+			<PrivateRoute path="/newcompany" component={FormCompany} />
+			<Route path="/company_profile/:id" component={CompanyProfile} />
 
 
 		</Router>

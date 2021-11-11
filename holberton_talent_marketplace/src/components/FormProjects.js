@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Axios from 'axios';
 
-const FormCompany = () => {
+const FormProjects = () => {
 	const [image, setImage] = useState([])
 	function formifyAndSend(data) {
 		const formData = new FormData()
@@ -10,7 +10,7 @@ const FormCompany = () => {
 			formData.append(key, value)
 		}
 		formData.append('files', image)
-		Axios.post("http://localhost:5000/companies", formData).then((response) => {
+		Axios.post("http://localhost:5000/holbies", formData).then((response) => {
 			console.log(response)
 		})
 	}
@@ -18,37 +18,33 @@ const FormCompany = () => {
 	const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 	return (
 
-		<>	<h1 className="text-center mt-5">Create your company profile</h1>
+		<>	<h1 className="text-center mt-5">Tell us about the projects in which you have excelled</h1>
 			<div className="container p-3">
 				<Formik onSubmit={(values) => (console.log(values))}
 					initialValues={{
 						name: '',
-						picture: '',
-						technologies: '',
-						about_us: '',
-						location: '',
-						contact_link: ''
+						description: '',
+						technologies_used: '',
+                        link_to_project: ''
 					}}
 					validate={(valores) => {
 						let errores = {};
 
 						// Validacion name
 						if (!valores.name) {
-							errores.name = 'Please enter your full name'
-						} else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.name)) {
-							errores.name = 'The name can only contain letters and spaces'
+							errores.name = 'Please fill this field'
 						}
 
-						if (!valores.about_us) {
-							errores.about_us = 'Please fill this field'
+						if (!valores.description) {
+							errores.description = 'Please fill this field'
 						}
 
-						if (!valores.location) {
-							errores.location = 'Please fill this field'
+						if (!valores.technologies_used) {
+							errores.technologies_used = 'Please fill this field'
 						}
 
-						if (!valores.contact_link) {
-							errores.contact_link = 'Please fill this field'
+                        if (!valores.link_to_project) {
+							errores.link_to_project = 'Please fill this field'
 						}
 
 						return errores;
@@ -66,61 +62,44 @@ const FormCompany = () => {
 					{({ errors }) => (
 						<Form className="formulario">
 							<div>
-								<label htmlFor="name">Company Name</label>
+								<label htmlFor="name">Job title</label>
 								<Field
 									type="text"
 									id="name"
 									name="name"
-									placeholder="Techstars"
+									placeholder=" Junior Backend Developer"
 								/>
 								<ErrorMessage name="name" component={() => (<div className="error">{errors.name}</div>)} />
 							</div>
 
 							<div>
-								<label htmlFor="picture">Upload your company picture</label>
-								<input type="file" onChange={(e) => setImage(e.target.files[0])} />
-								<ErrorMessage name="name" component={() => (<div className="error">{errors.name}</div>)} />
-							</div>
-
-							<div>
-								<label htmlFor="about_us">About us</label>
+								<label htmlFor="description">Describe the functions you performed</label>
 								<Field
 									type="text"
-									id="about_us"
-									name="about_us"
+									id="description"
+									name="description"
 									as="textarea"
-									placeholder="About us"
+									placeholder="description"
 								/>
 							</div>
 
 							<div>
-								<label htmlFor="technologies">Technologies</label>
+								<label htmlFor="technologies_used">Technologies Used</label>
 								<Field
 									type="text"
-									id="technologies"
-									name="technologies"
-									as="textarea"
-									placeholder="Python, AWS, Ruby, C/C++..."
+									id="technologies_used"
+									name="technologies_used"
+									placeholder="Python, JavaScript, AWS, Ruby..."
 								/>
 							</div>
 
-							<div>
-								<label htmlFor="location">Location</label>
+                            <div>
+								<label htmlFor="link_to_project">Link to your project(s)</label>
 								<Field
 									type="text"
-									id="location"
-									name="location"
-									placeholder="Medellín, Colombia"
-								/>
-							</div>
-
-							<div>
-								<label htmlFor="contact_link">Contact Link</label>
-								<Field
-									type="text"
-									id="contact_link"
-									name="contact_link"
-									placeholder="https://company.com/contact_us"
+									id="link_to_project"
+									name="link_to_project"
+									placeholder="www.myproject.com"
 								/>
 							</div>
 
@@ -138,4 +117,4 @@ const FormCompany = () => {
 		</>
 	);
 }
-export default FormCompany;
+export default FormProjects;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class CreateCompany extends Component {
+export default class NewCompany extends Component {
 	render() {
 		return (
 			<div>
-				Form to create company profile
+				Form to create New company profile
 			</div>
 		)
 	}
